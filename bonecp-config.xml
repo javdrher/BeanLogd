@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bonecp-config>
+	<default-config>
+		<property name="idleConnectionTestPeriodInMinutes">240</property>
+		<property name="idleConnectionTestPeriodInSeconds">14400</property>
+		<property name="idleMaxAgeInMinutes">60</property>
+		<property name="idleMaxAgeInSeconds">3600</property>
+		<property name="statementsCacheSize">0</property>
+		<property name="releaseHelperThreads">3</property>
+		<property name="closeConnectionWatch">false</property>
+		<property name="logStatementsEnabled">false</property>
+		<property name="acquireRetryDelayInMs">7000</property>
+		<property name="lazyInit">false</property>
+		<property name="transactionRecoveryEnabled">false</property>
+		<property name="acquireRetryAttempts">5</property>
+		<property name="disableJMX">false</property>
+		<property name="queryExecuteTimeLimitInMs">0</property>
+		<property name="poolAvailabilityThreshold">20</property>
+		<property name="disableConnectionTracking">false</property>
+		<property name="connectionTimeoutInMs">0</property>
+		<property name="closeConnectionWatchTimeoutInMs">0</property>
+		<property name="statementReleaseHelperThreads">0</property>
+		<property name="maxConnectionAgeInSeconds">0</property>
+		<property name="statisticsEnabled">false</property>
+		<property name="externalAuth">false</property>
+	</default-config>
+	
+	<named-config name="config">
+		<property name="jdbcUrl">jdbc:mysql://host/database</property>
+		<property name="username">user</property>
+		<property name="password">password</property>
+		
+		<property name="minConnectionsPerPartition">2</property>
+		<property name="maxConnectionsPerPartition">6</property>
+		<property name="acquireIncrement">2</property>
+		<property name="partitionCount">1</property>
+	</named-config>
+</bonecp-config>
