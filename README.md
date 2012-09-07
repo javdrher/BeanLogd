@@ -68,3 +68,7 @@ To do this, you should have a look in pom.xml for the JDBC dependency:
 ```
 Change it to the correct driver (take a look at the central maven repository to find the proper artifact).
 Next edit the JDBC URL in bonecp-config.xml.
+
+License
+=====
+BeanLogd is distributed under the MIT license. For more info, check license.txt
